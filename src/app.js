@@ -19,4 +19,8 @@ app.use(express.urlencoded({extended:true,limit:"16kb"}));
 app.use(express.static("public")); //for storing the assets
 app.use(cookieParser())
 
+//router
+import registerRouter from './routes/register.route.js'
+app.use("/api/v1/user",registerRouter);
+
 export default app;
